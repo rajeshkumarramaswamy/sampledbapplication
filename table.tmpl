@@ -1,0 +1,25 @@
+<table class="table table-bordered table-hover" id="details">
+        <thead>
+              <tr>
+                  <th>Index</th>
+                  <th>CFirst Name</th>
+                  <th>CLast Name</th>
+                  <th>CustomerName</th>
+                  <th>Employee</th>
+                  <th>Order Date</th>
+                  <th>Status</th>
+              </tr>
+          </thead>
+          <tbody>
+           <% $.each(res.dtable, function (key, values) { %>
+                  <td><%= key+1 %></td>
+                  <td><%= values.contactFirstName %></td>
+                  <td><%= values.contactLastName %></td>
+                  <td><%= values.customerName %></td>
+                  <td><%= values.firstName %> <%= values.lastName %></td>
+                  <td><%= values.orderDate %></td>
+                  <td><%= values.status %></td>
+              </tr>
+          <% }) %>
+          </tbody>
+
